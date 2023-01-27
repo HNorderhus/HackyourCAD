@@ -1,4 +1,4 @@
 
-#Checkers Board Game
+# Checkers Board Game
 
-###TODO
+### TODO
