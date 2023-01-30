@@ -13,8 +13,8 @@
 
 ##### Coding
 
-- [ ] Make board unselectable
-- [ ] Make only tokens selectable
+- [x] Make board unselectable
+- [x] Make only tokens selectable
 - [ ] Move tokens with mouse click
 - [ ] Highlight fields the token can move to
 - [ ] Rotate camera via macro or turnbased
