@@ -1,7 +1,7 @@
 import FreeCADGui as Gui
 
-from checker.constants import SQUARE_SIZE, WIDTH, HEIGHT
-from checker.game import Game
+from constants import SQUARE_SIZE
+from game import Game
 
 
 class Play:
@@ -13,6 +13,7 @@ class Play:
 
     def detect_mouse_click(self, info):
         left = (info["Button"] == "BUTTON1")
+        right = (info["Button"] == "BUTTON2")
         down = (info["State"] == "DOWN")
         pos = info["Position"]
         if left and down:
@@ -24,6 +25,10 @@ class Play:
                 # TODO: Display winner (with 3D object)
                 print(self.game.winner())
                 self.remove()
+        # TODO: Add a different way to end the game instead of right click
+        if right and down:
+            self.remove()
+            print("Game ended!!")
 
     def remove(self):
         self.view.removeEventCallback("SoMouseButtonEvent", self.callback)
