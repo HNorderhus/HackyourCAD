@@ -1,6 +1,6 @@
 import FreeCAD as App
 
-from constants import ROWS, ROW_NAMES, COLS, COL_NAMES, INITIAL_BOARD, INITIAL_PIECE_POS
+from constants import ROWS, ROW_NAMES, COLS, COL_NAMES, INITIAL_BOARD
 from piece import Piece
 
 
@@ -9,7 +9,6 @@ class Board:
         self.board = []
         self.black_left = self.white_left = 12
         self.black_kings = self.white_kings = 0
-        self.reset_pieces()
         self.create_board()
 
     def create_board(self):
@@ -21,21 +20,21 @@ class Board:
 
                 if field in INITIAL_BOARD:
                     label = INITIAL_BOARD[field]
-                    color = label[:-2]
+                    color = label[:-3]
                     self.board[row].append(Piece(label, row, col, color))
                 else:
                     self.board[row].append(0)
 
-    def reset_pieces(self):
-        """Reset the piece positions to the initial positions and make all pieces visible"""
-        for label in INITIAL_PIECE_POS:
-            piece = App.ActiveDocument.getObjectsByLabel(label)[0]
-            piece.Placement.Base.x = INITIAL_PIECE_POS[label][0]
-            piece.Placement.Base.y = INITIAL_PIECE_POS[label][1]
-            piece.ViewObject.Visibility = True
-
     def move(self, piece, row, col):
         """Move the piece to a new row and col and change the x and y position"""
+        if piece.color == 'Black' and row == 0:
+            self.black_kings += 1
+            piece.make_king()
+
+        elif piece.color == 'White' and row == (ROWS - 1):
+            self.white_kings += 1
+            piece.make_king()
+
         self.board[piece.row][piece.col], self.board[row][col] = self.board[row][col], self.board[piece.row][piece.col]
         piece.move(row, col)
 

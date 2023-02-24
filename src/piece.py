@@ -1,6 +1,6 @@
 import FreeCAD as App
 
-from constants import SQUARE_SIZE
+from constants import SQUARE_SIZE, COORDINATE_OFFSET_WHITE, COORDINATE_OFFSET_BLACK
 
 
 class Piece:
@@ -23,9 +23,12 @@ class Piece:
         """Update the row and col of the piece and the x and y position"""
         self.row = row
         self.col = col
-        self.x = col * SQUARE_SIZE + SQUARE_SIZE / 2
-        self.y = row * SQUARE_SIZE + SQUARE_SIZE / 2
-        pass
+        if self.color == 'Black':
+            self.x = (col * SQUARE_SIZE + SQUARE_SIZE / 2) - COORDINATE_OFFSET_BLACK[0]
+            self.y = (row * SQUARE_SIZE + SQUARE_SIZE / 2) - COORDINATE_OFFSET_BLACK[1]
+        elif self.color == 'White':
+            self.x = (col * SQUARE_SIZE + SQUARE_SIZE / 2) - COORDINATE_OFFSET_WHITE[0]
+            self.y = (row * SQUARE_SIZE + SQUARE_SIZE / 2) - COORDINATE_OFFSET_WHITE[1]
 
     def make_king(self):
         """Change the piece to a king"""
@@ -36,3 +39,4 @@ class Piece:
         self.update_pos(row, col)
         self.freecad_object.Placement.Base.x = self.x
         self.freecad_object.Placement.Base.y = self.y
+

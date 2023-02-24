@@ -11,17 +11,6 @@ class Game:
         self.turn = 'White'
         self.valid_moves = {}
 
-    def reset(self):
-        """Reset the game by resetting the board and piece positions"""
-        self.selected = None
-        self.board = Board()
-        self.turn = 'White'
-        self.valid_moves = {}
-
-    def update(self):
-        """Maby not needed"""
-        pass
-
     def select(self, row, col):
         """Select a piece and try to move it to a selected field"""
         if self.selected:
@@ -80,3 +69,4 @@ class Game:
         else:
             return False
         return True
+
