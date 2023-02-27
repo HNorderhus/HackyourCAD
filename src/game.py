@@ -1,7 +1,8 @@
 import FreeCAD as App
 
 from board import Board
-from constants import ROW_NAMES, COL_NAMES, HIGHLIGHT_FIELD_COLOR, BLACK_FIELD_COLOR, WHITE_FIELD_COLOR
+from constants import ROWS, ROW_NAMES, COLS, COL_NAMES, HIGHLIGHT_FIELD_COLOR, BLACK_FIELD_COLOR, WHITE_FIELD_COLOR
+from piece import Piece
 
 
 class Game:
@@ -56,17 +57,41 @@ class Game:
         else:
             self.turn = 'White'
 
+    def get_ai_board(self):
+        """Return the board"""
+        ai_board = Board(create_board=False)
+        board = []
+        for row in range(ROWS):
+            board.append([])
+            for col in range(COLS):
+                piece = self.board.get_piece(row, col)
+                if piece == 0:
+                    board[row].append(0)
+                else:
+                    p = Piece(piece.row, piece.col, piece.color)
+                    p.x = piece.x
+                    p.y = piece.y
+                    p.king = piece.king
+                    board[row].append(p)
+        ai_board.board = board
+        return ai_board
+
+    def ai_move(self, piece, move, jumped):
+        """Make a move for the AI"""
+        self.board.move(piece, move[0], move[1], False)
+        self.board.remove(jumped, False)
+        self.change_turn()
+
     def _move(self, row, col):
         """Move the selected piece to the given row and col if the move is valid and remove jumped pieces"""
         piece = self.board.get_piece(row, col)
         if self.selected and piece == 0 and (row, col) in self.valid_moves:
-            self.board.move(self.selected, row, col)
+            self.board.move(self.selected, row, col, False)
             jumped = self.valid_moves[(row, col)]
             if jumped:
-                self.board.remove(jumped)
+                self.board.remove(jumped, False)
             self.change_to_default_color(self.valid_moves)
             self.change_turn()
         else:
             return False
         return True
-
