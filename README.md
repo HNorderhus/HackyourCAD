@@ -31,6 +31,7 @@ To fulfill this goal, the focus was put on the programming aspect, leading to a 
 </p>
 
 * You always start as white. Select a piece by mouseclicking and confirm your selection by pressing the "S" key on your keyboard. If the selected piece should have legal moves available then those fields will be highlighted in green. Select one of the available options again by a single left mouseclick and confirm the selection by hitting the "S" key again. The computer will respond accordingly or your opponent needs to take control of the mouse and keyboard for their move.
+If you want to cancel the game, press the ESC key.
 * When the game ends, the winner will be printed to the console. If you wanna start the next game, simply execute the main.py again.
 * Should there be any questions about the basic rules of Checkers please refer to this short explanatory video: https://www.youtube.com/watch?v=ScKIdStgAfU&t=1s 
 
