@@ -62,7 +62,7 @@ When starting out with finding a suitable idea for the final project, the first 
 While the initial idea to have a game realized inside FreeCAD seemed underwhelming at first, it quickly became evident that it actually yielded a lot of potential to genuinely create a unique project while requiring a strong coding effort. 
 
 Most problems we encountered during our work were FreeCAD specific. Beginning by it not having a proper IDE to receiving error statements which are not true Pythonic, such as "Unknown C++ error encountered" or having to research new programming approaches since FreeCAD's interpreter does not support while-loops. 
-One of the biggest problems were how to work with the free camera, object selection and calculation of of object movement. The final approach by combining mouse clicking and keyboard entering was deemed the most effective, but not most intuitive. The object selection problem was solved by exporting the initial body to a .obj-file to have it selected entirely by a single click.
+One of the biggest problems were how to work with the free camera, object selection and calculation of object movement. The final approach by combining mouse clicking and keyboard entering was deemed the most effective, but not most intuitive. The object selection problem was solved by exporting the initial body to a .obj-file to have it selected entirely by a single click.
 
 These are just examples of hurdles we came across in our work. Eventually things came well together and we are proud of our work, deeming it appropriate for Master students. 
 
