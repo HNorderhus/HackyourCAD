@@ -35,6 +35,10 @@ To fulfill this goal the focus was put on the programming aspect, leading to a m
 * When the game ends, the winner will be printed to the console. If you wanna start the next game, simply switch back to the main.py-tab and hit the Run button again
 * Should there be any questions about the basic rules of Checkers please refer to this short explanatory video: https://www.youtube.com/watch?v=ScKIdStgAfU&t=1s 
 
+# UML
+
+
+
 # Minimax algorithm
 
 The computer's AI is realized by having the Minimax algorithm implemented. 
@@ -81,7 +85,5 @@ In conclusion, FreeCAD might be intuitive at first glance but diving deeper into
 - [ ] Highlight fields the token can move to
 - [ ] Rotate camera via macro or turnbased
 - [ ] Implement game rules (turn token into queen, remove other pieces ...)
-
-##### Extras
-
 - [x] Implement computer's logic
+
