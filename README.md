@@ -24,7 +24,6 @@ To fulfill this goal, the focus was put on the programming aspect, leading to a 
 <img align="center" src = "readme_images/loadmacro.PNG">
 </p>
 
-* Now, click the Run button on top of the taskbar while in the main.py-tab.
 * Switch to the checkers.FCStd-tab, the game is now running. The Report View will tell you about the necessary input in the Python console. 
 * !! In the beginning you need to select whether you want to play against a human adversary or against the computer. If you select "2", the computer, then you will need to select the difficulty in the next step, as instructed in the Report View. Make sure to manually delete the 2 from the console since no new input prompt will be generated and make sure to spell the difficulty setting correctly. Please note also that on the highest difficulty the computer will take 2 to 3 seconds before responding with their next moves !! 
 <p align="center">
