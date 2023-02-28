@@ -1,12 +1,20 @@
 
 # Checkers Board Game
 
-#Description
+# Description
 
 This is the final project for the module Foundations of CAD with FreeCAD and Python at the Bauhaus University Weimar in the wintersemester 2022/23. 
+A completely functional version of the classic boardgame Checkers has been implemented in FreeCAD using only the available Python libraries.
 It has been worked on by Morris Florek, matr. nr. 124437, and Henrik Norderhus, 123917, both students of the master program Digital Engineering.
 
+The idea was to find out, whether an open-source CAD program can be repurposed to function as a simplistic gaming platform. 
+To fulfill this goal the focus was put on the programming aspect, leading to a modelling:programming ratio of 20:80.   
 
+# How-to 
+
+# Minimax algorithm
+
+# Reflection
 
 ### TODO
 
