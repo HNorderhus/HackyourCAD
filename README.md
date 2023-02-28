@@ -13,13 +13,15 @@ To fulfill this goal the focus was put on the programming aspect, leading to a m
 # How-to 
 
 * To play the Checkers game, first download the .FCStd file and the Python files from the src folder. 
-* Open the .FCStd file and copy the Python scripts to your local Freecad's scripting folder, this should be a hidden Folder under User/AppData/Roaming/FreeCAD/Macro. 
+* Open the .FCStd file and copy the Python scripts to your local Freecad's scripting folder, this should be a hidden folder under User/AppData/Roaming/FreeCAD/Macro. 
 * Copy the Python files into the folder, making sure that no other Python scripts with the same name exist that directory.
 * In FreeCAD, open the Makros window and select the main.py script. Click edit, the Python script will open in a new tab. Make sure that under View -> Panels you have selected both Report View and Python Console.
-* Now, click the Play button on top of the taskbar while in the main.py-tab.
+* Now, click the Run button on top of the taskbar while in the main.py-tab.
 * Switch to the checkers.FCStd-tab, the game is now running. The Report View will tell you about the necessary input in the Python console. 
-* !! In the beginning you need to select whether you want to play against a human adversary or against the computer. If you select "2", the computer, then you will need to select the difficulty in the next step, as instructed in the Report View. Make sure to manually delete the 2 from the console since no need input prompt will be generated and make sure to spell the difficulty setting correctly. !! 
-* 
+* !! In the beginning you need to select whether you want to play against a human adversary or against the computer. If you select "2", the computer, then you will need to select the difficulty in the next step, as instructed in the Report View. Make sure to manually delete the 2 from the console since no new input prompt will be generated and make sure to spell the difficulty setting correctly. Please note also that on the highest difficulty the computer will take 2 to 3 seconds before responding with their next moves !! 
+* You always start as white. Select a piece by mouseclicking and confirm your selection by pressing the "S" key on your keyboard. If the selected piece should have legal moves available then those fields will be highlighted in green. Select one of the available options again by a single left mouseclick and confirm the selection by hitting the "S" key again. The computer will respond accordingly or your opponent needs to take control of the mouse and keyboard for their move.
+* When the game ends, the winner will be printed to the console. If you wanna start the next game, simply switch back to the main.py-tab and hit the Run button again
+* Should there be any questions about the basic rules of Checkers please refer to this short explanatory video: https://www.youtube.com/watch?v=ScKIdStgAfU&t=1s 
 
 
 
