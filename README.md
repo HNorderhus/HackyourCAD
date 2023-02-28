@@ -8,9 +8,13 @@ A completely functional version of the classic boardgame Checkers has been imple
 It has been worked on by Morris Florek, matr. nr. 124437, and Henrik Norderhus, 123917, both students of the master program Digital Engineering.
 
 The idea was to find out, whether an open-source CAD program can be repurposed to function as a simplistic gaming platform. 
-To fulfill this goal the focus was put on the programming aspect, leading to a modelling:programming ratio of 20:80.   
+To fulfill this goal the focus was put on the programming aspect, leading to a modelling:programming ratio of 20:80. Besides this, the project should reflect the lessons learnt throughout the students master's program, especially the respective FreeCAD course, which is why high expectation regarding the code's extent was expected from the beginning.
 
 # How-to 
+
+* To play the Checkers game, first download the .FCStd file and the Python files from the src folder. Open the .FCStd file and copy the Python scripts to your local Freecad's scripting folder, this should be a hidden Folder under User/AppData/Roaming/FreeCAD/Macro. Copy the Python files into the folder, making sure that no other Python scripts with the same name exist that directory.
+
+
 
 # Minimax algorithm
 
