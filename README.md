@@ -25,7 +25,7 @@ To fulfill this goal the focus was put on the programming aspect, leading to a m
 
 # Minimax algorithm
 
-The computer's ai is realized by having the Minimax algorithm implemented. 
+The computer's AI is realized by having the Minimax algorithm implemented. 
 
 It is used to determine the optimal move for a player in a two-player, zero-sum game where both players have perfect information. Zero-sum means that the gain of one player is the loss of the other player. Perfect information means that both players know the state of the game at any given time.
 
@@ -40,6 +40,17 @@ Finally, the algorithm returns the move that leads to the node with the highest 
 The different difficulties offered by the game differ in their depth-evaluating of the tree. The lowest difficulty looks ahead to the next rank, the highest looks four ranks ahead.
 
 # Reflection
+
+When starting out with finding a suitable idea for the final project, the first drafts were quickly discarded since there already were too many implementations and solutions. 
+
+While the initial idea to have a game realized inside FreeCAD seemed underwhelming at first, it quickly became evident that it actually yielded a lot of potential to genuinely create a unique project while requiring a strong coding effort. 
+
+Most problems we encountered during our work were FreeCAD specific. Beginning by it not having a proper IDE to receiving error statements which are not true Pythonic, such as "Unknown C++ error encountered" or having to research new programming approaches since FreeCAD's interpreter does not support while-loops. 
+One of the biggest problems were how to work with the free camera, object selection and calculation of of object movement. The final approach by combining mouse clicking and keyboard entering was deemed the most effective, but not most intuitive. The object selection problem was solved by exporting the initial body to a .obj-file to have it selected entirely by a single click.
+
+These are just examples of hurdles we came across in our work. Eventually things came well together and we are proud of our work, deeming it appropriate for Master students. 
+
+In conclusion, FreeCAD might be intuitive at first glance but diving deeper into modifying it, quickly many obstacles and hurdles become evident, which turned out much more time-consuming than expected. While it was tedious to work with it, we are glad to having worked with a open-source program on a deeper level. 
 
 ### TODO
 
