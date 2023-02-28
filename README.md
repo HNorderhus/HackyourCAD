@@ -12,7 +12,14 @@ To fulfill this goal the focus was put on the programming aspect, leading to a m
 
 # How-to 
 
-* To play the Checkers game, first download the .FCStd file and the Python files from the src folder. Open the .FCStd file and copy the Python scripts to your local Freecad's scripting folder, this should be a hidden Folder under User/AppData/Roaming/FreeCAD/Macro. Copy the Python files into the folder, making sure that no other Python scripts with the same name exist that directory.
+* To play the Checkers game, first download the .FCStd file and the Python files from the src folder. 
+* Open the .FCStd file and copy the Python scripts to your local Freecad's scripting folder, this should be a hidden Folder under User/AppData/Roaming/FreeCAD/Macro. 
+* Copy the Python files into the folder, making sure that no other Python scripts with the same name exist that directory.
+* In FreeCAD, open the Makros window and select the main.py script. Click edit, the Python script will open in a new tab. Make sure that under View -> Panels you have selected both Report View and Python Console.
+* Now, click the Play button on top of the taskbar while in the main.py-tab.
+* Switch to the checkers.FCStd-tab, the game is now running. The Report View will tell you about the necessary input in the Python console. 
+* !! In the beginning you need to select whether you want to play against a human adversary or against the computer. If you select "2", the computer, then you will need to select the difficulty in the next step, as instructed in the Report View. Make sure to manually delete the 2 from the console since no need input prompt will be generated and make sure to spell the difficulty setting correctly. !! 
+* 
 
 
 
