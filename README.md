@@ -8,7 +8,7 @@ A completely functional version of the classic boardgame Checkers has been imple
 It has been worked on by Morris Florek, matr. nr. 124437, and Henrik Norderhus, 123917, both students of the master program Digital Engineering.
 
 The idea was to find out, whether an open-source CAD program can be repurposed to function as a simplistic gaming platform. 
-To fulfill this goal the focus was put on the programming aspect, leading to a modelling:programming ratio of 20:80. Besides this, the project should reflect the lessons learnt throughout the students master's program, especially the respective FreeCAD course, which is why high expectation regarding the code's extent was expected from the beginning.
+To fulfill this goal the focus was put on the programming aspect, leading to a modelling:programming ratio of 20:80. Besides this, the project should reflect the lessons learnt throughout the students master's program, especially the respective FreeCAD course.
 
 # How-to 
 
@@ -23,9 +23,21 @@ To fulfill this goal the focus was put on the programming aspect, leading to a m
 * When the game ends, the winner will be printed to the console. If you wanna start the next game, simply switch back to the main.py-tab and hit the Run button again
 * Should there be any questions about the basic rules of Checkers please refer to this short explanatory video: https://www.youtube.com/watch?v=ScKIdStgAfU&t=1s 
 
-
-
 # Minimax algorithm
+
+The computer's ai is realized by having the Minimax algorithm implemented. 
+
+It is used to determine the optimal move for a player in a two-player, zero-sum game where both players have perfect information. Zero-sum means that the gain of one player is the loss of the other player. Perfect information means that both players know the state of the game at any given time.
+
+The algorithm works by creating a tree of all possible moves and outcomes, starting from the current state of the game. Each node in the tree represents a state of the game, and the edges represent the moves that lead from one state to another.
+
+The algorithm recursively evaluates the tree, alternating between maximizing the score for the current player and minimizing the score for the opponent player. The score is calculated using a heuristic function that estimates the likelihood of winning from the given state.
+
+At the bottom of the tree, where the game ends, the score is known, either a win, loss, or draw. The algorithm backtracks from the bottom of the tree to the root, updating the scores of the parent nodes with the maximum or minimum of their children's scores depending on whether the current player is trying to maximize or minimize their score.
+
+Finally, the algorithm returns the move that leads to the node with the highest score for the current player.
+
+The different difficulties offered by the game differ in their depth-evaluating of the tree. The lowest difficulty looks ahead to the next rank, the highest looks four ranks ahead.
 
 # Reflection
 
@@ -35,9 +47,8 @@ To fulfill this goal the focus was put on the programming aspect, leading to a m
 
 - [x] Create board
 - [x] Create tokens
-- [ ] Decide on camera angles
-- [ ] Place lighting
-- [ ] Background and general presentation in FreeCAD
+- [x] Create king tokens
+
 
 ##### Coding
 
@@ -50,7 +61,4 @@ To fulfill this goal the focus was put on the programming aspect, leading to a m
 
 ##### Extras
 
-- [ ] Animate the token's movement and removal
-- [ ] Animate the preparation of the board for the next game
-- [ ] Have a GUI displaying the score or option to restart the game
-- [ ] Implement computer's logic
+- [x] Implement computer's logic
