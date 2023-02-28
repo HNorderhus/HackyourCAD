@@ -68,7 +68,7 @@ These are just examples of hurdles we came across in our work. Eventually things
 
 In conclusion, FreeCAD might be intuitive at first glance but diving deeper into modifying it, quickly many obstacles and hurdles become evident, which turned out much more time-consuming than expected. While it was tedious to work with it, we are glad to having worked with a open-source program on a deeper level. 
 
-### TODO
+### Work packages
 
 ##### Visuals
 
@@ -86,4 +86,3 @@ In conclusion, FreeCAD might be intuitive at first glance but diving deeper into
 - [ ] Rotate camera via macro or turnbased
 - [ ] Implement game rules (turn token into queen, remove other pieces ...)
 - [x] Implement computer's logic
-
