@@ -10,6 +10,8 @@ It has been worked on by Morris Florek, matr. nr. 124437, and Henrik Norderhus, 
 The idea was to find out, whether an open-source CAD program can be repurposed to function as a simplistic gaming platform. 
 To fulfill this goal the focus was put on the programming aspect, leading to a modelling:programming ratio of 20:80. Besides this, the project should reflect the lessons learnt throughout the students master's program, especially the respective FreeCAD course.
 
+<img src = "readme_images/screenshot_freecad.PNG">
+
 # How-to 
 
 * To play the Checkers game, first download the .FCStd file and the Python files from the src folder. 
