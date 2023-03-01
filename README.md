@@ -37,7 +37,7 @@ If you want to cancel the game, press the ESC key.
 
 # UML
 <p align="center">
-<img src = "readme_images/UML_checkers_game.PNG">
+<img src = "readme_images/UML_checkers_game.png">
 </p>
 
 # Minimax algorithm
