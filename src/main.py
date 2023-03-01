@@ -19,6 +19,7 @@ class Play:
         print("Press 's' to select a piece and 'ESC' to end the game")
 
     def detect_selection(self, info):
+        """Detect selection of a piece or field"""
         select_key = (info["Key"] == "s")
         escape_key = (info["Key"] == "ESCAPE")
         down = (info["State"] == "DOWN")
@@ -49,14 +50,17 @@ class Play:
             print("Game ended!!")
 
     def remove(self):
+        """Remove the event callback"""
         self.view.removeEventCallback("SoKeyboardEvent", self.callback)
 
     def get_row_col_of_field(self, x, y):
+        """Return the row and column of a field"""
         row = int(y // SQUARE_SIZE)
         col = int(x // SQUARE_SIZE)
         return row, col
 
     def get_row_col_of_fc_obj(self, label):
+        """Return the row and column of a FreeCAD object"""
         for r in self.game.board.board:
             for piece in r:
                 if piece != 0:
@@ -88,6 +92,7 @@ class Play:
             crown.ViewObject.Visibility = False
 
     def get_ai_move(self, new_board):
+        """Return the piece, move and jumped pieces of the AI move"""
         jumped = []
         piece = None
         move = None
@@ -107,6 +112,7 @@ class Play:
         return piece, move, jumped
 
     def game_mode(self):
+        """Return the game mode"""
         print("Choose a game mode: (1) Human vs Human, (2) Human vs AI")
         choice = int(input("Please enter a number:\n"))
         if choice in [1, 2]:
@@ -119,6 +125,7 @@ class Play:
             self.game_mode()
 
     def game_difficulty(self):
+        """Return the game difficulty" (depth of the minimax algorithm)"""
         print("Choose a game difficulty: Beginner, Amateur, Professional, Expert")
         choice = input("Please enter a difficulty level:\n").lower()
         if choice in GAME_LEVELS:
