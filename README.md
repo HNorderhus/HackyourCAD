@@ -36,8 +36,9 @@ If you want to cancel the game, press the ESC key.
 * Should there be any questions about the basic rules of Checkers please refer to this short explanatory video: https://www.youtube.com/watch?v=ScKIdStgAfU&t=1s 
 
 # UML
-
-
+<p align="center">
+<img src = "readme_images/UML_checkers_game.PNG">
+</p>
 
 # Minimax algorithm
 
@@ -68,21 +69,38 @@ These are just examples of hurdles we came across in our work. Eventually things
 
 In conclusion, FreeCAD might be intuitive at first glance but diving deeper into modifying it, quickly many obstacles and hurdles become evident, which turned out much more time-consuming than expected. While it was tedious to work with it, we are glad to having worked with a open-source program on a deeper level. 
 
-### Work packages
+# Work packages
 
-##### Visuals
+### Visuals
 
 - [x] Create board
 - [x] Create tokens
 - [x] Create king tokens
 
 
-##### Coding
+### Coding
 
-- [x] Make board unselectable
-- [x] Make only tokens selectable
-- [ ] Move tokens with mouse click
-- [ ] Highlight fields the token can move to
-- [ ] Rotate camera via macro or turnbased
-- [ ] Implement game rules (turn token into queen, remove other pieces ...)
-- [x] Implement computer's logic
+- [x] **Determine code structure**
+  - [x] Create a class for a Piece
+  - [x] Create a class for the Board
+  - [x] Create a class for the Game
+  - [x] Create a class for the playing (Play)
+- [x] **Implement game logic**
+  - [x] Move and remove pieces
+  - [x] Get legal moves for a selected piece
+  - [x] Turn a piece into a king piece
+  - [x] Change turn after a move
+  - [x] Check if a player has won
+- [X] **Implement playability**
+  - [x] Select and move pieces with mouse and keyboard commands
+  - [x] Highlight fields the pieces can move to
+  - [X] Change visibility of pieces and king pieces depending on the state of the piece
+  - [X] Reset piece positions before starting a new game
+- [X] **AI implementation**
+  - [X] Implement Minimax algorithm
+  - [X] Implement different difficulty levels
+
+# References
+[1] FreeCAD Wiki (2022), Pivy, accessed 28 January 2023, https://wiki.freecad.org/Pivy  
+[2] FreeCAD Wiki (2023), Code snippets, 2.13 Observe mouse events in the 3D viewer via Python, accessed 07 February 2023, https://wiki.freecad.org/Code_snippets#Observing_mouse_events_in_the_3D_viewer_via_Python  
+[3] techwithtim (2022), Python-Checkers-AI, accessed 05 February 2023, https://github.com/techwithtim/Python-Checkers-AI
